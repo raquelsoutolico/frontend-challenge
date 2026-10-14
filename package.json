@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:challenge": "npm run dev -w @frontend-challenge/challenge"
+    "dev:challenge": "npm run dev -w @frontend-challenge/challenge",
+    "preview:challenge": "npm run build -w @frontend-challenge/challenge && npm run preview -w @frontend-challenge/challenge"
   },
   "repository": {
     "type": "git",
