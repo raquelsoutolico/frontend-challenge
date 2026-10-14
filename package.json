@@ -1,0 +1,24 @@
+{
+  "name": "frontend-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:challenge": "npm run dev -w @frontend-challenge/challenge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raquelsoutolico/frontend-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/raquelsoutolico/frontend-challenge/issues"
+  },
+  "homepage": "https://github.com/raquelsoutolico/frontend-challenge#readme",
+  "workspaces": ["packages/*"]
+}
