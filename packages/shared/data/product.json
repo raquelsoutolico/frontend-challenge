@@ -1,26 +1,26 @@
 {
-    "id": 123875109835409823,
+    "id": "123875109835409823",
     "title": "Serum Antiarrugas",
     "description": "Este serum antiarrugas actúa directamente sobre la piel rejuveneciéndola",
     "ingredients": "Aqua, Glycerin, Caprylic/Capric Triglyceride, Silica, Plukenetia Volubilis Seed Oil, Bakuchiol, Mauritia Flexuosa Fruit Oil, sh-Nonapeptide-4, Lysolecithin",
     "usage": "Aplica por la mañana y por la noche",
     "variants": [
         {
-            "id": 9187329487,
+            "id": "9187329487",
             "size": "10ml",
             "price": 2040,
             "available": true,
             "image": "https://http.cat/status/200"
         },
         {
-            "id": 9187329488,
+            "id": "9187329488",
             "size": "20ml",
             "price": 2870,
             "available": false,
             "image": "https://http.cat/status/205"
         },
         {
-            "id": 9187329489,
+            "id": "9187329489",
             "size": "30ml",
             "price": 3550,
             "available": true,
