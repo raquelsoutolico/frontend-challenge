@@ -14,7 +14,7 @@ export default [
     },
   },
   {
-    files: ["packages/challenge/src/**/*.js", "packages/shared/**/*.js", "template/src/**/*.js"],
+    files: ["src/**/*.js"],
     languageOptions: {
       globals: globals.browser,
     },
