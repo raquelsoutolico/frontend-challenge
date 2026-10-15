@@ -51,16 +51,54 @@
           <p class="product__message" role="status" aria-live="polite"></p>
 
           <section class="product__details">
-            <div class="product__detail">
-              <h2>Ingredientes</h2>
-              <p>
-                Aqua, Glycerin, Caprylic/Capric Triglyceride, Silica, Plukenetia Volubilis
-                Seed Oil, Bakuchiol, Mauritia Flexuosa Fruit Oil, sh-Nonapeptide-4, Lysolecithin
-              </p>
-            </div>
-            <div class="product__detail">
-              <h2>Modo de uso</h2>
-              <p>Aplica por la mañana y por la noche</p>
+            <div class="tabs">
+              <div class="tabs__list" role="tablist" aria-label="Información del producto">
+                <button
+                  type="button"
+                  class="tabs__tab"
+                  role="tab"
+                  id="tab-ingredients"
+                  aria-selected="true"
+                  aria-controls="panel-ingredients"
+                >
+                  Ingredientes
+                </button>
+                <button
+                  type="button"
+                  class="tabs__tab"
+                  role="tab"
+                  id="tab-usage"
+                  aria-selected="false"
+                  aria-controls="panel-usage"
+                  tabindex="-1"
+                >
+                  Modo de uso
+                </button>
+              </div>
+
+              <div
+                class="tabs__panel"
+                role="tabpanel"
+                id="panel-ingredients"
+                aria-labelledby="tab-ingredients"
+                tabindex="0"
+              >
+                <p>
+                  Aqua, Glycerin, Caprylic/Capric Triglyceride, Silica, Plukenetia Volubilis
+                  Seed Oil, Bakuchiol, Mauritia Flexuosa Fruit Oil, sh-Nonapeptide-4, Lysolecithin
+                </p>
+              </div>
+
+              <div
+                class="tabs__panel"
+                role="tabpanel"
+                id="panel-usage"
+                aria-labelledby="tab-usage"
+                tabindex="0"
+                hidden
+              >
+                <p>Aplica por la mañana y por la noche</p>
+              </div>
             </div>
           </section>
         </div>
