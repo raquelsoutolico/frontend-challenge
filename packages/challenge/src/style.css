@@ -235,19 +235,45 @@ main {
 
 /* Detalles (ingredientes / uso) */
 .product__details {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
   padding-top: var(--space-4);
   border-top: 1px solid var(--color-border);
 }
 
-.product__detail h2 {
-  font-size: 1rem;
-  margin-bottom: var(--space-2);
+.tabs__list {
+  display: flex;
+  gap: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
 }
 
-.product__detail p {
+.tabs__tab {
+  margin-bottom: -1px;
+  padding: var(--space-2) 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tabs__tab:hover {
+  color: var(--color-primary);
+}
+
+.tabs__tab[aria-selected="true"] {
+  border-bottom-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.tabs__tab:focus-visible,
+.tabs__panel:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.tabs__panel {
+  padding-top: var(--space-3);
   font-size: 0.9375rem;
 }
 
