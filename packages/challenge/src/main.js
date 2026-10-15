@@ -13,7 +13,6 @@ const messageElement = document.querySelector(".product__message");
 const tabList = document.querySelector(".tabs__list");
 const tabs = tabList.querySelectorAll('[role="tab"]');
 
-
 function findVariant(id) {
   return product.variants.find((variant) => variant.id === id);
 }
@@ -34,14 +33,12 @@ function activateTab(newTab) {
   });
 }
 
-let selectedVariant = findVariant(
-  variantPicker.querySelector("input:checked").value
-);
+let selectedVariant = findVariant(variantPicker.querySelector("input:checked").value);
 
-variantPicker.addEventListener('change', (event) => {
+variantPicker.addEventListener("change", (event) => {
   const variantId = event.target.value;
   const variant = findVariant(variantId);
-  selectedVariant = variant; 
+  selectedVariant = variant;
   renderVariant(variant);
 
   const url = new URL(window.location.href);
@@ -82,11 +79,20 @@ tabList.addEventListener("keydown", (event) => {
   let newIndex;
 
   switch (event.key) {
-    case "ArrowRight": newIndex = (currentIndex + 1) % tabsArray.length; break;
-    case "ArrowLeft": newIndex = (currentIndex - 1 + tabsArray.length) % tabsArray.length; break;
-    case "Home": newIndex = 0; break;
-    case "End": newIndex = tabsArray.length - 1; break;
-    default: return;
+    case "ArrowRight":
+      newIndex = (currentIndex + 1) % tabsArray.length;
+      break;
+    case "ArrowLeft":
+      newIndex = (currentIndex - 1 + tabsArray.length) % tabsArray.length;
+      break;
+    case "Home":
+      newIndex = 0;
+      break;
+    case "End":
+      newIndex = tabsArray.length - 1;
+      break;
+    default:
+      return;
   }
 
   event.preventDefault();
