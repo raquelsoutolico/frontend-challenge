@@ -3,7 +3,7 @@ import globals from "globals";
 
 export default [
   {
-    ignores: ["**/dist/", "**/test-results/", "**/playwright-report/"],
+    ignores: ["**/dist/", "**/test-results/", "**/playwright-report/", "template-export/"],
   },
   js.configs.recommended,
   {
@@ -20,7 +20,7 @@ export default [
     },
   },
   {
-    files: ["**/*.config.js", "packages/challenge/e2e/**/*.js"],
+    files: ["**/*.config.js", "packages/challenge/e2e/**/*.js", "scripts/**/*.mjs"],
     languageOptions: {
       globals: globals.node,
     },

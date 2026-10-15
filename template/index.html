@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serum Antiarrugas | Prueba Cosmetics</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="./" class="site-header__logo">Prueba Cosmetics</a>
+      <a href="#cart" class="site-header__cart">
+        Carrito
+        <span class="cart-count" aria-live="polite">0</span>
+      </a>
+    </header>
+
+    <main>
+      <article class="product">
+        <figure class="product__media">
+          <img
+            class="product__image"
+            src="https://cdn.shopify.com/s/files/1/0613/2505/0061/files/amazonian-bio-vit-aserum_193c3229-997e-4390-9b06-5d240307aa4a.jpg?v=1697631658"
+            alt="Serum Antiarrugas, formato 10 ml"
+            width="600"
+            height="600"
+          />
+        </figure>
+
+        <div class="product__info">
+          <h1 class="product__title">Serum Antiarrugas</h1>
+          <p class="product__description">
+            Este serum antiarrugas actúa directamente sobre la piel rejuveneciéndola
+          </p>
+          <p class="product__price">20,40 €</p>
+
+          <fieldset class="variant-picker">
+            <legend class="variant-picker__legend">Tamaño</legend>
+
+            <input type="radio" id="variant-9187329487" name="variant" value="9187329487" checked />
+            <label for="variant-9187329487">10 ml</label>
+
+            <input
+              type="radio"
+              id="variant-9187329488"
+              name="variant"
+              value="9187329488"
+              disabled
+            />
+            <label for="variant-9187329488">20 ml (agotado)</label>
+
+            <input type="radio" id="variant-9187329489" name="variant" value="9187329489" />
+            <label for="variant-9187329489">30 ml</label>
+          </fieldset>
+
+          <button type="button" class="product__add-to-cart">Añadir al carrito</button>
+          <p class="product__message" role="status" aria-live="polite"></p>
+
+          <section class="product__details">
+            <div class="product__detail">
+              <h2>Ingredientes</h2>
+              <p>
+                Aqua, Glycerin, Caprylic/Capric Triglyceride, Silica, Plukenetia Volubilis Seed Oil,
+                Bakuchiol, Mauritia Flexuosa Fruit Oil, sh-Nonapeptide-4, Lysolecithin
+              </p>
+            </div>
+
+            <div class="product__detail">
+              <h2>Modo de uso</h2>
+              <p>Aplica por la mañana y por la noche</p>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Prueba Cosmetics</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
