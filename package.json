@@ -8,7 +8,9 @@
     "dev:challenge": "npm run dev -w @frontend-challenge/challenge",
     "preview:challenge": "npm run build -w @frontend-challenge/challenge && npm run preview -w @frontend-challenge/challenge",
     "test:challenge": "npm run test -w @frontend-challenge/challenge",
-    "test:e2e:challenge": "npm run test:e2e -w @frontend-challenge/challenge"
+    "test:e2e:challenge": "npm run test:e2e -w @frontend-challenge/challenge",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,10 @@
     "url": "https://github.com/raquelsoutolico/frontend-challenge/issues"
   },
   "homepage": "https://github.com/raquelsoutolico/frontend-challenge#readme",
-  "workspaces": ["packages/*"]
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
 }
