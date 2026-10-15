@@ -258,3 +258,13 @@ main {
   text-align: center;
   font-size: 0.875rem;
 }
+
+/* Mensajes del producto */
+.product__message {
+  min-height: 1.5em;
+  font-size: 0.875rem;
+}
+
+.product__message--error {
+  color: #B3261E;
+}
