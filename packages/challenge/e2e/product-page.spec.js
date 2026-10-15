@@ -41,3 +41,84 @@ test.describe("Selector de variantes", () => {
         await expect(page.locator(".product__price")).toHaveText("20,40\u00A0€");
     });
 });
+
+test.describe("Añadir al carrito", () => {
+    test("añade el producto y actualiza el contador", async ({ page }) => {
+        await page.goto("/");
+        const addButton = page.getByRole("button", { name: "Añadir al carrito" });
+
+        await addButton.click();
+
+        await expect(page.locator(".cart-count")).toHaveText("1");
+        await expect(page.getByRole("status")).toHaveText("Añadido al carrito");
+        await expect(addButton).toBeEnabled();
+    });
+
+    test("desactiva el botón mientras se añade", async ({ page }) => {
+        await page.goto("/");
+        const addButton = page.locator(".product__add-to-cart");
+
+        await addButton.click();
+
+        await expect(addButton).toBeDisabled();
+        await expect(addButton).toHaveText("Añadiendo...");
+        await expect(addButton).toBeEnabled();
+    });
+
+    test("un doble clic solo añade una unidad", async ({ page }) => {
+        await page.goto("/");
+
+        await page.getByRole("button", { name: "Añadir al carrito" }).dblclick();
+
+        await expect(page.locator(".cart-count")).toHaveText("1");
+        await page.waitForTimeout(1000);
+        await expect(page.locator(".cart-count")).toHaveText("1");
+    });
+    });
+
+    test.describe("Pestañas de información", () => {
+    test("al pulsar una pestaña se muestra su panel", async ({ page }) => {
+        await page.goto("/");
+        const usageTab = page.getByRole("tab", { name: "Modo de uso" });
+
+        await usageTab.click();
+
+        await expect(usageTab).toHaveAttribute("aria-selected", "true");
+        await expect(page.getByRole("tabpanel", { name: "Modo de uso" })).toBeVisible();
+        await expect(page.getByRole("tabpanel", { name: "Ingredientes" })).toBeHidden();
+    });
+
+    test("se navega entre pestañas con las flechas, Inicio y Fin", async ({ page }) => {
+        await page.goto("/");
+        const ingredientsTab = page.getByRole("tab", { name: "Ingredientes" });
+        const usageTab = page.getByRole("tab", { name: "Modo de uso" });
+
+        await ingredientsTab.focus();
+
+        await page.keyboard.press("ArrowRight");
+        await expect(usageTab).toBeFocused();
+        await expect(usageTab).toHaveAttribute("aria-selected", "true");
+
+        await page.keyboard.press("ArrowRight");
+        await expect(ingredientsTab).toBeFocused();
+
+        await page.keyboard.press("End");
+        await expect(usageTab).toBeFocused();
+
+        await page.keyboard.press("Home");
+        await expect(ingredientsTab).toBeFocused();
+    });
+
+    test("con Tab se entra en la pestaña activa y después en su panel", async ({ page }) => {
+        await page.goto("/");
+        await page.getByRole("tab", { name: "Modo de uso" }).click();
+
+        await page.getByRole("button", { name: "Añadir al carrito" }).focus();
+
+        await page.keyboard.press("Tab");
+        await expect(page.getByRole("tab", { name: "Modo de uso" })).toBeFocused();
+
+        await page.keyboard.press("Tab");
+        await expect(page.getByRole("tabpanel", { name: "Modo de uso" })).toBeFocused();
+    });
+});
