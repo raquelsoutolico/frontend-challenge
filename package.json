@@ -7,7 +7,8 @@
   "scripts": {
     "dev:challenge": "npm run dev -w @frontend-challenge/challenge",
     "preview:challenge": "npm run build -w @frontend-challenge/challenge && npm run preview -w @frontend-challenge/challenge",
-    "test:challenge": "npm run test -w @frontend-challenge/challenge"
+    "test:challenge": "npm run test -w @frontend-challenge/challenge",
+    "test:e2e:challenge": "npm run test:e2e -w @frontend-challenge/challenge"
   },
   "repository": {
     "type": "git",
