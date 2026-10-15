@@ -11,7 +11,8 @@
     "test:e2e:challenge": "npm run test:e2e -w @frontend-challenge/challenge",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "template:export": "node scripts/export-template.mjs"
   },
   "repository": {
     "type": "git",

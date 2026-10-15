@@ -1,0 +1,30 @@
+{
+  "id": "123875109835409823",
+  "title": "Serum Antiarrugas",
+  "description": "Este serum antiarrugas actúa directamente sobre la piel rejuveneciéndola",
+  "ingredients": "Aqua, Glycerin, Caprylic/Capric Triglyceride, Silica, Plukenetia Volubilis Seed Oil, Bakuchiol, Mauritia Flexuosa Fruit Oil, sh-Nonapeptide-4, Lysolecithin",
+  "usage": "Aplica por la mañana y por la noche",
+  "variants": [
+    {
+      "id": "9187329487",
+      "size": "10 ml",
+      "price": 2040,
+      "available": true,
+      "image": "https://cdn.shopify.com/s/files/1/0613/2505/0061/files/amazonian-bio-vit-aserum_193c3229-997e-4390-9b06-5d240307aa4a.jpg?v=1697631658"
+    },
+    {
+      "id": "9187329488",
+      "size": "20 ml",
+      "price": 2870,
+      "available": false,
+      "image": "https://cdn.shopify.com/s/files/1/0613/2505/0061/files/amazonian-bio-vit-a-serum-caja.jpg?v=1701709323"
+    },
+    {
+      "id": "9187329489",
+      "size": "30 ml",
+      "price": 3550,
+      "available": true,
+      "image": "https://cdn.shopify.com/s/files/1/0613/2505/0061/files/amazonian-bio-vit-a-serum-caja.jpg?v=1701709323"
+    }
+  ]
+}
