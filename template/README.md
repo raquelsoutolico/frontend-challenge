@@ -10,11 +10,11 @@ JavaScript.
 
 - **Tiempo orientativo:** entre 2 y 3 horas. No es un límite estricto: preferimos algo bien hecho
   y sin terminar a algo completo y apresurado.
-- **Fecha de entrega:** [FECHA]
+- **Fecha de entrega:** 5 días desde la recepción de esta prueba.
 - **Tecnologías:** HTML, CSS y JavaScript sin frameworks ni librerías (nada de React, jQuery,
   Tailwind, etc.).
 - **Uso de IA:** puedes usar herramientas de IA, pero debes poder explicar y defender cada línea
-  de tu código en la entrevista.
+  de tu código en el readme que adjuntes.
 
 ## Puesta en marcha
 
